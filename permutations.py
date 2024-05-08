@@ -1,5 +1,3 @@
-import math
-
 def recurse(nums, arr):
     if len(nums) == 2:
         return [ arr + [nums[0]] + [nums[1]], arr + [nums[1]] + [nums[0]] ]
@@ -15,7 +13,6 @@ def recurse(nums, arr):
 
 class Solution:
     def permute(self, nums: list[int]) -> list[list[int]]:
-        num_per = math.factorial(len(nums))
         if len(nums) == 1:
             return [nums]
         return recurse(nums, [])
